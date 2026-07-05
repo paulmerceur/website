@@ -8,7 +8,7 @@
   </head>
   <body>
     <main>
-      <h1><a href="./" style="text-decoration: none;">paul merceur</a></h1>
+      <h1><a href="./" style="text-decoration: none;">Paul Merceur</a></h1>
 
       <h2 style="display: flex; justify-content: space-between;">software engineer <a href="https://github.com/paulmerceur">github</a></h2>
 
@@ -36,7 +36,7 @@
           this is a tiny "homelab", both in terms of physical size and cost.
         </p>
 
-        <div class="fact-grid" aria-label="homelab hardware summary">
+        <div class="small-grid" aria-label="homelab hardware summary">
           <div>
             <strong>computer</strong>
             <span>Raspberry Pi 5 Model B</span>
@@ -56,7 +56,7 @@
         </div>
 
         <h3>what it does</h3>
-        <div class="service-list">
+        <div class="large-grid">
           <div>
             <h4>files and sync</h4>
             <p>
@@ -89,15 +89,14 @@
 
         <h3>infrastructure</h3>
         <p>
-          Tailscale is doing a lot of work here. it lets me use the NAS from outside the house
-          like it is still on my local network, without exposing admin tools, SMB, or media apps
-          to the public internet. it replaced the kind of VPN setup that used to feel annoying
-          enough that I would avoid using it.
+          Tailscale is doing a lot of work here. it lets me use the NAS from outside my local network,
+          without exposing admin tools, SMB, or media apps to the public internet.
+          it replaced very manual approaches like using wireguard (Tailscale is built on it).
         </p>
         <p>
           there are also nightly automatic encrypted backups to a cloud storage provider. the goal
           is not fancy disaster recovery; it is making sure the important files and service state
-          survive if the one local SSD stops being one local SSD.
+          survive if the one local SSD breaks.
         </p>
 
         <h3>notes</h3>

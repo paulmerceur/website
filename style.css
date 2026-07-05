@@ -51,45 +51,52 @@ a[aria-current="page"] {
   margin-right: 1rem;
 }
 
-.fact-grid {
+.small-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.75rem;
   margin-top: 1.5rem;
 }
 
-.fact-grid > div,
-.service-list > div {
+.small-grid > div,
+.large-grid > div {
   border: 1px solid #333333;
   padding: 0.85rem;
 }
 
-.fact-grid strong,
-.fact-grid span {
+.small-grid strong,
+.small-grid span,
+.large-grid h4 {
   display: block;
 }
 
-.fact-grid strong {
-  font-size: 0.8rem;
+.small-grid strong,
+.large-grid h4 {
   color: #9f9f9f;
   font-weight: 500;
+  margin-bottom: 0;
 }
 
-.fact-grid span {
+.small-grid strong {
+  font-size: 0.8rem;
+}
+
+.small-grid span,
+.large-grid p {
   margin-top: 0.25rem;
 }
 
-.service-list {
+.large-grid {
   display: grid;
   gap: 1rem;
 }
 
-.service-list p {
-  margin: 0;
+.large-grid p {
+  margin-bottom: 0;
 }
 
 @media (max-width: 38rem) {
-  .fact-grid {
+  .small-grid {
     grid-template-columns: 1fr;
   }
 }
