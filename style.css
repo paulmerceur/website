@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  background: #121212;
+  color: #dddddd;
+  font: 16px/1.55 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+main {
+  max-width: 40rem;
+  margin: 4rem auto;
+  padding: 0 1rem;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
+h2 {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+}
+
+p {
+  color: #c8c8c8;
+}
+
+a {
+  color: #eeeeee;
+}
+
+a[aria-current="page"] {
+  color: #ffffff;
+  text-decoration-thickness: 2px;
+}
