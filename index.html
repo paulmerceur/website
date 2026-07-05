@@ -33,7 +33,7 @@
         <p>
           this site runs on the same small Raspberry Pi NAS that handles my file storage,
           media libraries, private service dashboards, and a few public-facing things.
-          this is a tiny "homalab", both in terms of physical size and cost.
+          this is a tiny "homelab", both in terms of physical size and cost.
         </p>
 
         <div class="fact-grid" aria-label="homelab hardware summary">
@@ -86,6 +86,19 @@
             </p>
           </div>
         </div>
+
+        <h3>infrastructure</h3>
+        <p>
+          Tailscale is doing a lot of work here. it lets me use the NAS from outside the house
+          like it is still on my local network, without exposing admin tools, SMB, or media apps
+          to the public internet. it replaced the kind of VPN setup that used to feel annoying
+          enough that I would avoid using it.
+        </p>
+        <p>
+          there are also nightly automatic encrypted backups to a cloud storage provider. the goal
+          is not fancy disaster recovery; it is making sure the important files and service state
+          survive if the one local SSD stops being one local SSD.
+        </p>
 
         <h3>notes</h3>
         <p>
