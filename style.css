@@ -103,7 +103,7 @@ a[aria-current="page"] {
 
 .demo-frame {
   display: block;
-  width: min(100%, 24rem);
+  width: min(100%, 19rem);
   aspect-ratio: 152 / 210;
   border: 1px solid #333333;
   background: #000000;
