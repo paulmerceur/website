@@ -11,6 +11,10 @@ main {
   padding: 0 1rem;
 }
 
+section {
+  margin-top: 3rem;
+}
+
 h1 {
   font-size: 1.6rem;
 }
@@ -31,4 +35,8 @@ a {
 a[aria-current="page"] {
   color: #ffffff;
   text-decoration-thickness: 2px;
+}
+
+#projects > a {
+  margin-right: 1rem;
 }
