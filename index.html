@@ -29,7 +29,79 @@
         </p>
       </section>
 
-      <section data-page="homelab" hidden></section>
+      <section data-page="homelab" hidden>
+        <h2>homelab</h2>
+
+        <p>
+          this site runs on the same small Raspberry Pi NAS that handles my file storage,
+          media libraries, private service dashboards, and a few public-facing things.
+          the point is not that it is huge; the point is that it is useful without being huge.
+        </p>
+
+        <div class="fact-grid" aria-label="homelab hardware summary">
+          <div>
+            <strong>computer</strong>
+            <span>Raspberry Pi 5 Model B</span>
+          </div>
+          <div>
+            <strong>memory</strong>
+            <span>4 GB RAM</span>
+          </div>
+          <div>
+            <strong>launch price</strong>
+            <span>$60 USD for the 4 GB board</span>
+          </div>
+          <div>
+            <strong>storage</strong>
+            <span>2 TB SATA SSD on a PCIe SATA HAT</span>
+          </div>
+        </div>
+
+        <h3>what it does</h3>
+        <div class="service-list">
+          <div>
+            <h4>files and sync</h4>
+            <p>
+              SMB shares for local files, Nextcloud for browser/mobile access, Syncthing for selected
+              folders, and Time Machine storage for my Mac.
+            </p>
+          </div>
+          <div>
+            <h4>media</h4>
+            <p>
+              Navidrome for music and Jellyfin for movies/shows. the Pi is treated as a direct-play box,
+              not a transcoding server.
+            </p>
+          </div>
+          <div>
+            <h4>network and access</h4>
+            <p>
+              Pi-hole handles local DNS/DHCP, Tailscale handles private remote access, and Nginx Proxy
+              Manager keeps the small public surface behind HTTPS.
+            </p>
+          </div>
+          <div>
+            <h4>operations</h4>
+            <p>
+              Docker runs the services. OpenMediaVault manages the NAS basics. Homepage, Portainer,
+              Beszel, and health checks make it easier to see what is running and catch obvious failures.
+            </p>
+          </div>
+        </div>
+
+        <h3>the honest version</h3>
+        <p>
+          the biggest weakness is storage redundancy: right now it is one SSD, which is fine for capacity
+          but not fine if the drive dies. important data is backed up automatically to encrypted cloud
+          storage, and the most important folders also exist on local devices, but that is still backup,
+          not high availability.
+        </p>
+        <p>
+          I also keep the public surface intentionally small. most admin and media tools are private-only;
+          the public parts are the website, cloud access, and the minimum ports needed for the services
+          that actually require it.
+        </p>
+      </section>
       <section data-page="rl" hidden></section>
     </main>
 
