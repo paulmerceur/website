@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PufferLib Four Rooms</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        overflow: hidden;
+        background: #000000;
+      }
+
+      canvas.emscripten {
+        display: block;
+        width: 100%;
+        height: auto;
+        border: 0;
+        background: #000000;
+        image-rendering: pixelated;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" tabindex="-1"></canvas>
+    <script>
+      var Module = {
+        canvas: document.getElementById("canvas")
+      };
+    </script>
+    <script src="game.js" async></script>
+  </body>
+</html>
