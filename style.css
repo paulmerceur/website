@@ -100,3 +100,11 @@ a[aria-current="page"] {
     grid-template-columns: 1fr;
   }
 }
+
+.demo-frame {
+  display: block;
+  width: min(100%, 24rem);
+  aspect-ratio: 152 / 210;
+  border: 1px solid #333333;
+  background: #000000;
+}
