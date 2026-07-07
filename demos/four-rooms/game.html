@@ -25,12 +25,12 @@
   <body>
     <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" tabindex="-1"></canvas>
     <script>
-      const assetVersion = "20260706-four-rooms-visibility";
+      const assetVersion = "20260706-four-rooms-retrained";
       var Module = {
         canvas: document.getElementById("canvas"),
         locateFile: (path) => `${path}?v=${assetVersion}`
       };
     </script>
-    <script src="game.js?v=20260706-four-rooms-visibility" async></script>
+    <script src="game.js?v=20260706-four-rooms-retrained" async></script>
   </body>
 </html>
