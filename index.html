@@ -116,12 +116,6 @@
         </p>
       </section>
       <section data-page="rl" hidden>
-        <p>
-          real-time PufferLib demo running in the browser. i built the Four Rooms environment in C so the same env can train fast locally and compile down to WASM for the site.
-        </p>
-        <p>
-          the agent is a tiny PufferNet policy exported from a local checkpoint: 7x7x3 observations, two 128-wide hidden layers, and about 118k float32 parameters. hold Shift and press W/A/D or the arrow keys to take control; the agent takes over when you release Shift.
-        </p>
 
         <iframe
           class="demo-frame"
@@ -129,6 +123,19 @@
           title="PufferLib Four Rooms demo"
           loading="lazy">
         </iframe>
+
+        <p>
+          real-time PufferLib demo running in the browser. i built the Four Rooms environment in C so the same env can train fast locally and compile down to WASM for the site.
+        </p>
+        <p>
+          the agent is a tiny PufferNet policy exported from a local checkpoint: 7x7x3 observations, two 128-wide hidden layers, and about 118k float32 parameters.
+        </p>
+        <p>
+          click on the demo, hold Shift and press W/A/D or the arrow keys to take control; the agent takes over when you release Shift.
+        </p>
+        <p>
+          enviromnent based on <a href="https://minigrid.farama.org/environments/minigrid/FourRoomsEnv/">Minigrid Four Rooms environment</a>, code available on <a href="https://github.com/paulmerceur/PufferLib">GitHub</a>.
+        </p>
       </section>
     </main>
 
