@@ -19,9 +19,18 @@ h1 {
   font-size: 1.6rem;
 }
 
+h1 a {
+  text-decoration: none;
+}
+
 h2 {
   margin-top: 2rem;
   font-size: 1.1rem;
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
 }
 
 h3 {
@@ -135,4 +144,5 @@ nav a[aria-current="page"] {
   aspect-ratio: 1 / 1;
   border: 1px solid #333333;
   background: #000000;
+  margin-bottom: 3rem;
 }

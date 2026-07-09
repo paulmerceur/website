@@ -4,26 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Paul Merceur</title>
-    <link rel="stylesheet" href="style.css?v=20260709-nav">
+    <link rel="stylesheet" href="style.css?v=20260709-pages">
   </head>
-  <body>
+  <body data-page="home">
     <main>
-      <h1><a href="./" style="text-decoration: none;">Paul Merceur</a></h1>
+      <header data-site-header></header>
 
-      <h2 style="display: flex; justify-content: space-between;">software engineer <a href="https://github.com/paulmerceur">github</a></h2>
-
-      <nav aria-label="main navigation">
-        <a href="#projects" data-link="projects">projects</a>
-        <a href="#notes" data-link="notes">notes</a>
-      </nav>
-
-      <section data-page="home">
+      <section>
         <p>
           this is the public, loosely organized part of what I am building and learning;
           mostly projects, notes, half-finished ideas, and small things that are useful enough to keep around.
         </p>
         <p>
-          the site is intentionally plain: static HTML, a little CSS, and a tiny bit of browser JavaScript; no framework, no heavy tools. 
+          the site is intentionally plain: static HTML, a little CSS, and a tiny bit of browser JavaScript; no framework, no heavy tools.
           https only to make Big Browser happy.
         </p>
 
@@ -35,165 +28,14 @@
         </ul>
 
         <h2>selected projects</h2>
-        <div class="index-list">
-          <article>
-            <h3><a href="#homelab" data-link="homelab">homelab</a></h3>
-            <p>a small, private-first Raspberry Pi NAS for files, media, sync, and this site.</p>
-          </article>
-          <article>
-            <h3><a href="#rl" data-link="rl">four rooms RL</a></h3>
-            <p>a trained agent running live in the browser.</p>
-          </article>
-        </div>
+        <div class="index-list" data-project-list data-limit="2"></div>
 
         <h2>notes</h2>
-        <div class="index-list">
-          <article><h3><a href="#backups-not-redundancy" data-link="backups-not-redundancy">backups are not redundancy</a></h3></article>
-          <article><h3><a href="#no-framework" data-link="no-framework">why this site has no framework</a></h3></article>
-        </div>
-      </section>
-
-      <section data-page="projects" hidden>
-        <h2>projects</h2>
-        <div class="index-list">
-          <article>
-            <h3><a href="#homelab" data-link="homelab">homelab</a></h3>
-            <p>a small, private-first Raspberry Pi NAS for files, media, sync, and this site.</p>
-          </article>
-          <article>
-            <h3><a href="#rl" data-link="rl">four rooms RL</a></h3>
-            <p>a trained agent running live in the browser.</p>
-          </article>
-        </div>
-      </section>
-
-      <section data-page="notes" hidden>
-        <h2>notes</h2>
-        <div class="index-list">
-          <article><h3><a href="#backups-not-redundancy" data-link="backups-not-redundancy">backups are not redundancy</a></h3></article>
-          <article><h3><a href="#no-framework" data-link="no-framework">why this site has no framework</a></h3></article>
-        </div>
-      </section>
-
-      <section data-page="backups-not-redundancy" hidden>
-        <h2>backups are not redundancy</h2>
-      </section>
-
-      <section data-page="no-framework" hidden>
-        <h2>why this site has no framework</h2>
-      </section>
-
-      <section data-page="homelab" hidden>
-        <p>
-          this site runs on the same small Raspberry Pi NAS that handles my file storage,
-          media libraries, private service dashboards, and a few public-facing things.
-          this is a tiny "homelab", both in terms of physical size and cost.
-        </p>
-
-        <div class="small-grid" aria-label="homelab hardware summary">
-          <div>
-            <strong>computer</strong>
-            <span>Raspberry Pi 5 Model B</span>
-          </div>
-          <div>
-            <strong>memory</strong>
-            <span>4 GB RAM</span>
-          </div>
-          <div>
-            <strong>launch price</strong>
-            <span>$60 USD for the 4 GB board</span>
-          </div>
-          <div>
-            <strong>storage</strong>
-            <span>2 TB SATA SSD on a PCIe SATA HAT</span>
-          </div>
-        </div>
-
-        <h3>what it does</h3>
-        <div class="large-grid">
-          <div>
-            <h4>files and sync</h4>
-            <p>
-              SMB shares for local files, Nextcloud for browser/mobile access, Syncthing for selected
-              folders, and Time Machine storage for my Mac.
-            </p>
-          </div>
-          <div>
-            <h4>media</h4>
-            <p>
-              Navidrome for music and Jellyfin for movies/shows. the Pi is treated as a direct-play box,
-              not a transcoding server.
-            </p>
-          </div>
-          <div>
-            <h4>network and access</h4>
-            <p>
-              Pi-hole handles local DNS/DHCP, Tailscale handles private remote access, and Nginx Proxy
-              Manager keeps the small public surface behind HTTPS.
-            </p>
-          </div>
-          <div>
-            <h4>operations</h4>
-            <p>
-              Docker runs the services. OpenMediaVault manages the NAS basics. Homepage, Portainer,
-              Beszel, and health checks make it easier to see what is running and catch obvious failures.
-            </p>
-          </div>
-        </div>
-
-        <h3>infrastructure</h3>
-        <p>
-          Tailscale is doing a lot of work here. it lets me use the NAS from outside my local network,
-          without exposing admin tools, SMB, or media apps to the public internet.
-          it replaced very manual approaches like using wireguard (Tailscale is built on it).
-        </p>
-        <p>
-          there are also nightly automatic encrypted backups to a cloud storage provider. the goal
-          is not fancy disaster recovery; it is making sure the important files and service state
-          survive if the one local SSD breaks.
-        </p>
-
-        <h3>notes</h3>
-        <p>
-          the biggest weakness is storage redundancy: right now it is one SSD, which is fine for capacity
-          but not fine if the drive dies. important data is backed up automatically to encrypted cloud
-          storage, and the most important folders also exist on local devices, but that is still backup,
-          not high availability.
-        </p>
-        <p>
-          I also keep the public surface intentionally small. most admin and media tools are private-only;
-          the public parts are the website, cloud access, and the minimum ports needed for the services
-          that actually require it.
-        </p>
-        <p>
-          this project started thanks to the amazing work by <a href="https://youtu.be/l30sADfDiM8?si=21SyOgr9JHKaqIbh">Jeff Geerling</a>.
-        </p>
-      </section>
-      <section data-page="rl" hidden>
-
-        <iframe
-          class="demo-frame"
-          src="demos/four-rooms/game.html?v=20260706-four-rooms-retrained"
-          title="PufferLib Four Rooms demo"
-          loading="lazy"
-          style="margin-bottom: 3rem;">
-        </iframe>
-
-        <p>
-          real-time PufferLib demo running in the browser. i built the Four Rooms environment in C so the same env can train fast locally and compile down to WASM for the site.
-        </p>
-        <p>
-          the agent is a tiny PufferNet policy exported from a local checkpoint: 7x7x3 observations, two 128-wide hidden layers, and about 118k float32 parameters.
-        </p>
-        <p>
-          click on the demo, hold Shift and press W/A/D or the arrow keys to take control; the agent takes over when you release Shift.
-        </p>
-        <p>
-          enviromnent based on <a href="https://minigrid.farama.org/environments/minigrid/FourRoomsEnv/">Minigrid Four Rooms environment</a>, code available on <a href="https://github.com/paulmerceur/PufferLib">GitHub</a>.
-        </p>
+        <div class="index-list" data-note-list data-limit="2"></div>
       </section>
     </main>
 
+    <script src="site-data.js"></script>
     <script src="site.js"></script>
   </body>
 </html>
