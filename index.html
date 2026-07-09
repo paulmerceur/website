@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Paul Merceur</title>
-    <link rel="stylesheet" href="style.css?v=20260705-four-rooms-infinite">
+    <link rel="stylesheet" href="style.css?v=20260709-nav">
   </head>
   <body>
     <main>
@@ -12,11 +12,10 @@
 
       <h2 style="display: flex; justify-content: space-between;">software engineer <a href="https://github.com/paulmerceur">github</a></h2>
 
-      <section id="projects">
-        <h2>projects</h2>
-        <a href="#homelab" data-link="homelab">homelab</a>
-        <a href="#rl" data-link="rl">reinforcement learning</a>
-      </section>
+      <nav aria-label="main navigation">
+        <a href="#projects" data-link="projects">projects</a>
+        <a href="#notes" data-link="notes">notes</a>
+      </nav>
 
       <section data-page="home">
         <p>
@@ -27,6 +26,61 @@
           the site is intentionally plain: static HTML, a little CSS, and a tiny bit of browser JavaScript; no framework, no heavy tools. 
           https only to make Big Browser happy.
         </p>
+
+        <h2>right now</h2>
+        <ul>
+          <li>building browser-based reinforcement learning demos</li>
+          <li>running a small Raspberry Pi NAS and homelab</li>
+          <li>learning what is worth publishing before it is finished</li>
+        </ul>
+
+        <h2>selected projects</h2>
+        <div class="index-list">
+          <article>
+            <h3><a href="#homelab" data-link="homelab">homelab</a></h3>
+            <p>a small, private-first Raspberry Pi NAS for files, media, sync, and this site.</p>
+          </article>
+          <article>
+            <h3><a href="#rl" data-link="rl">four rooms RL</a></h3>
+            <p>a trained agent running live in the browser.</p>
+          </article>
+        </div>
+
+        <h2>notes</h2>
+        <div class="index-list">
+          <article><h3><a href="#backups-not-redundancy" data-link="backups-not-redundancy">backups are not redundancy</a></h3></article>
+          <article><h3><a href="#no-framework" data-link="no-framework">why this site has no framework</a></h3></article>
+        </div>
+      </section>
+
+      <section data-page="projects" hidden>
+        <h2>projects</h2>
+        <div class="index-list">
+          <article>
+            <h3><a href="#homelab" data-link="homelab">homelab</a></h3>
+            <p>a small, private-first Raspberry Pi NAS for files, media, sync, and this site.</p>
+          </article>
+          <article>
+            <h3><a href="#rl" data-link="rl">four rooms RL</a></h3>
+            <p>a trained agent running live in the browser.</p>
+          </article>
+        </div>
+      </section>
+
+      <section data-page="notes" hidden>
+        <h2>notes</h2>
+        <div class="index-list">
+          <article><h3><a href="#backups-not-redundancy" data-link="backups-not-redundancy">backups are not redundancy</a></h3></article>
+          <article><h3><a href="#no-framework" data-link="no-framework">why this site has no framework</a></h3></article>
+        </div>
+      </section>
+
+      <section data-page="backups-not-redundancy" hidden>
+        <h2>backups are not redundancy</h2>
+      </section>
+
+      <section data-page="no-framework" hidden>
+        <h2>why this site has no framework</h2>
       </section>
 
       <section data-page="homelab" hidden>
@@ -121,7 +175,8 @@
           class="demo-frame"
           src="demos/four-rooms/game.html?v=20260706-four-rooms-retrained"
           title="PufferLib Four Rooms demo"
-          loading="lazy">
+          loading="lazy"
+          style="margin-bottom: 3rem;">
         </iframe>
 
         <p>

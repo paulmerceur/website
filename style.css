@@ -47,8 +47,36 @@ a[aria-current="page"] {
   text-decoration-thickness: 2px;
 }
 
-#projects > a {
-  margin-right: 1rem;
+nav {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+nav a {
+  color: #9f9f9f;
+}
+
+.index-list {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.index-list article {
+  border-left: 1px solid #333333;
+  padding-left: 1rem;
+}
+
+.index-list h3 {
+  margin: 0;
+}
+
+.index-list p {
+  margin: 0.2rem 0 0;
+}
+
+nav a[aria-current="page"] {
+  color: #ffffff;
 }
 
 .small-grid {
