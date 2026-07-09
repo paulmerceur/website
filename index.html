@@ -6,9 +6,15 @@
     <title>Paul Merceur</title>
     <link rel="stylesheet" href="style.css?v=20260709-pages">
   </head>
-  <body data-page="home">
+  <body>
     <main>
-      <header data-site-header></header>
+      <h1><a href="./" style="text-decoration: none;">Paul Merceur</a></h1>
+      <h2 style="display: flex; justify-content: space-between;">software engineer <a href="https://github.com/paulmerceur">github</a></h2>
+
+      <nav aria-label="main navigation">
+        <a href="projects.html">projects</a>
+        <a href="notes.html">notes</a>
+      </nav>
 
       <section>
         <p>
@@ -16,7 +22,7 @@
           mostly projects, notes, half-finished ideas, and small things that are useful enough to keep around.
         </p>
         <p>
-          the site is intentionally plain: static HTML, a little CSS, and a tiny bit of browser JavaScript; no framework, no heavy tools.
+          the site is intentionally plain: static HTML and a little CSS; no framework, no heavy tools.
           https only to make Big Browser happy.
         </p>
 
@@ -28,14 +34,23 @@
         </ul>
 
         <h2>selected projects</h2>
-        <div class="index-list" data-project-list data-limit="2"></div>
+        <div class="index-list">
+          <article>
+            <h3><a href="projects.html#homelab">homelab</a></h3>
+            <p>a small, private-first Raspberry Pi NAS for files, media, sync, and this site.</p>
+          </article>
+          <article>
+            <h3><a href="projects.html#four-rooms">four rooms RL</a></h3>
+            <p>a trained agent running live in the browser.</p>
+          </article>
+        </div>
 
         <h2>notes</h2>
-        <div class="index-list" data-note-list data-limit="2"></div>
+        <div class="index-list">
+          <article><h3><a href="notes.html">backups are not redundancy</a></h3></article>
+          <article><h3><a href="notes.html">why this site has no framework</a></h3></article>
+        </div>
       </section>
     </main>
-
-    <script src="site-data.js"></script>
-    <script src="site.js"></script>
   </body>
 </html>
