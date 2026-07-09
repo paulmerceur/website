@@ -66,6 +66,10 @@ nav a {
   color: #9f9f9f;
 }
 
+.nav-back {
+  margin-right: 0.25rem;
+}
+
 .index-list {
   display: grid;
   gap: 1.25rem;
@@ -78,6 +82,13 @@ nav a {
 
 .index-list h3 {
   margin: 0;
+}
+
+.note-date {
+  color: #9f9f9f;
+  display: block;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
 }
 
 .index-list p {
