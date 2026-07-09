@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Four Rooms RL · Paul Merceur</title>
+    <link rel="stylesheet" href="../style.css?v=20260709-pages">
+  </head>
+  <body>
+    <main>
+      <h1><a href="../" style="text-decoration: none;">Paul Merceur</a></h1>
+      <h2 style="display: flex; justify-content: space-between;">software engineer <a href="https://github.com/paulmerceur">github</a></h2>
+
+      <nav aria-label="main navigation">
+        <a href="../projects.html" class="nav-back">← projects</a>
+        <a href="../notes.html">notes</a>
+      </nav>
+
+      <section>
+        <h2>four rooms RL</h2>
+        <iframe class="demo-frame" src="../demos/four-rooms/game.html?v=20260706-four-rooms-retrained" title="PufferLib Four Rooms demo" loading="lazy"></iframe>
+        <p>real-time PufferLib demo running in the browser. i built the Four Rooms environment in C so the same env can train fast locally and compile down to WASM for the site.</p>
+        <p>the agent is a tiny PufferNet policy exported from a local checkpoint: 7x7x3 observations, two 128-wide hidden layers, and about 118k float32 parameters.</p>
+        <p>click on the demo, hold Shift and press W/A/D or the arrow keys to take control; the agent takes over when you release Shift.</p>
+        <p>environment based on <a href="https://minigrid.farama.org/environments/minigrid/FourRoomsEnv/">Minigrid Four Rooms</a>, code available on <a href="https://github.com/paulmerceur/PufferLib">GitHub</a>.</p>
+      </section>
+    </main>
+  </body>
+</html>
